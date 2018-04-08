@@ -1,12 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View } from 'react-native';
+import { StyleSheet, Text, Image, View, ActivityIndicator, NetInfo } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 export default class Landing extends React.Component {
     static navigationOptions = {header:null};
     componentDidMount(){
-        // check if server is up
-        setTimeout( () => this.props.navigation.navigate('ItemMap'), 1000);
+        NetInfo.getConnectionInfo().then((connectionInfo)=>{
+            console.log(connectionInfo);
+            if(connectionInfo.type === "wifi" || connectionInfo.type === "cellular"){
+                setTimeout(()=>this.props.navigation.navigate('ItemList'), 5000);
+            }
+        });
     }
   render() {
       const { navigate } = this.props.navigation;
@@ -17,6 +21,7 @@ export default class Landing extends React.Component {
             source = {require("../../imgs/logo.png")}
         />
         <Text style={styles.name}>breadcrumbs</Text>
+        <ActivityIndicator size={30} color="#068D9D" />
       </View>
     );
   }
@@ -36,6 +41,8 @@ const styles = StyleSheet.create({
   },
   name:{
       fontSize: 30,
-      color: "#333533"
+      color: "#333533",
+      marginBottom: 100,
+      fontFamily: "WorkSans"
   }
 });

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MapView from 'react-native-maps';
+import { Marker } from 'react-native-maps';
 
 export default class ItemMap extends React.Component {
     static navigationOptions = {header:null};
@@ -18,6 +19,9 @@ export default class ItemMap extends React.Component {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         },
+        "markers":[
+
+        ]
       };
     }
     componentDidMount(){
@@ -45,8 +49,15 @@ export default class ItemMap extends React.Component {
         showsBuildings = {true}
         onRegionChange={this.onRegionChange.bind(this)}
         onRef={ref => (ref.animateToViewingAngle(65, 60000))}
-        initialRegion={this.state.region}
-/>
+        initialRegion={this.state.region}>
+        {this.state.markers.map(marker => (
+            <Marker
+              coordinate={marker.latlng}
+              title={marker.title}
+              description={marker.description}
+            />
+          ))}
+    </MapView>
       </View>
     );
   }

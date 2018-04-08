@@ -31,9 +31,6 @@ const Nav = StackNavigator({
   Home: {
     screen: Landing
   },
-  Config: {
-    screen: Config
-  },
   ItemList:{
       screen:ItemList
   },

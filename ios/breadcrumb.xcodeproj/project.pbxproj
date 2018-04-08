@@ -37,6 +37,17 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		553D65F8DECC4ECF877B70CA /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC75AB7B913442B8053E55B /* libAirMaps.a */; };
+		550C29D07697494B9FF41ADA /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 380B549FCC234BD388B080D4 /* libRCTMGL.a */; };
+		BB4F38D14449474E95E9B966 /* HiMelody-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42788F707D4649C392C3E438 /* HiMelody-Regular.ttf */; };
+		22D965FAB2E9456BA7E3E5D7 /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE7AA3F0744DC08C2A0AD3 /* WorkSans-Black.ttf */; };
+		AD03C4AB49804BC59150B8EB /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C060D46B10D9464FBB05E45C /* WorkSans-Bold.ttf */; };
+		50414EB539464F80BD48C6C4 /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40D4EF434517447CB0D0907B /* WorkSans-ExtraBold.ttf */; };
+		182BC7CD989847478587A292 /* WorkSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E3454DDD2B45D4B012AAE8 /* WorkSans-ExtraLight.ttf */; };
+		8097B7A3E3FC4627B4ADB79F /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C88EE11BA3C43A1B9BE396F /* WorkSans-Light.ttf */; };
+		2919A99C130B4B999BCA7B27 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 874CEB458374410887C7DC02 /* WorkSans-Medium.ttf */; };
+		CCA796BE6FF046EA8F57C28A /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89DE9F8FD954CF5A5FE93D0 /* WorkSans-Regular.ttf */; };
+		1936AD4DBDAE414FA9BEC6BB /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2F0D9E75A4BE0A6D94D24 /* WorkSans-SemiBold.ttf */; };
+		00F9771E12BA41C88C2B5E66 /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95D2EC8A5D6940E2AFE9B949 /* WorkSans-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +299,20 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		DA98313EAB7F498D8A550A78 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DDC75AB7B913442B8053E55B /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EB6C73C2841140D6A5D0CB0C /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; name = "RCTMGL.xcodeproj"; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		380B549FCC234BD388B080D4 /* libRCTMGL.a */ = {isa = PBXFileReference; name = "libRCTMGL.a"; path = "libRCTMGL.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D279B19C58B444979CDF4417 /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; name = "RCTMGL.xcodeproj"; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B7C5DBA617CD4F3897EE8F50 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		42788F707D4649C392C3E438 /* HiMelody-Regular.ttf */ = {isa = PBXFileReference; name = "HiMelody-Regular.ttf"; path = "../assets/fonts/HiMelody-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7AAE7AA3F0744DC08C2A0AD3 /* WorkSans-Black.ttf */ = {isa = PBXFileReference; name = "WorkSans-Black.ttf"; path = "../assets/fonts/WorkSans-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C060D46B10D9464FBB05E45C /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; name = "WorkSans-Bold.ttf"; path = "../assets/fonts/WorkSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40D4EF434517447CB0D0907B /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "WorkSans-ExtraBold.ttf"; path = "../assets/fonts/WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F4E3454DDD2B45D4B012AAE8 /* WorkSans-ExtraLight.ttf */ = {isa = PBXFileReference; name = "WorkSans-ExtraLight.ttf"; path = "../assets/fonts/WorkSans-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8C88EE11BA3C43A1B9BE396F /* WorkSans-Light.ttf */ = {isa = PBXFileReference; name = "WorkSans-Light.ttf"; path = "../assets/fonts/WorkSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		874CEB458374410887C7DC02 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; name = "WorkSans-Medium.ttf"; path = "../assets/fonts/WorkSans-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D89DE9F8FD954CF5A5FE93D0 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; name = "WorkSans-Regular.ttf"; path = "../assets/fonts/WorkSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9D2F0D9E75A4BE0A6D94D24 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "WorkSans-SemiBold.ttf"; path = "../assets/fonts/WorkSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95D2EC8A5D6940E2AFE9B949 /* WorkSans-Thin.ttf */ = {isa = PBXFileReference; name = "WorkSans-Thin.ttf"; path = "../assets/fonts/WorkSans-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +342,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				553D65F8DECC4ECF877B70CA /* libAirMaps.a in Frameworks */,
+				550C29D07697494B9FF41ADA /* libRCTMGL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +521,9 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				DA98313EAB7F498D8A550A78 /* AirMaps.xcodeproj */,
+				EB6C73C2841140D6A5D0CB0C /* RCTMGL.xcodeproj */,
+				D279B19C58B444979CDF4417 /* RCTMGL.xcodeproj */,
+				B7C5DBA617CD4F3897EE8F50 /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -516,6 +545,7 @@
 				00E356EF1AD99517003FC87E /* breadcrumbTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BAD64AD69E7B4ADA849AB175 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -541,6 +571,24 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		BAD64AD69E7B4ADA849AB175 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				42788F707D4649C392C3E438 /* HiMelody-Regular.ttf */,
+				7AAE7AA3F0744DC08C2A0AD3 /* WorkSans-Black.ttf */,
+				C060D46B10D9464FBB05E45C /* WorkSans-Bold.ttf */,
+				40D4EF434517447CB0D0907B /* WorkSans-ExtraBold.ttf */,
+				F4E3454DDD2B45D4B012AAE8 /* WorkSans-ExtraLight.ttf */,
+				8C88EE11BA3C43A1B9BE396F /* WorkSans-Light.ttf */,
+				874CEB458374410887C7DC02 /* WorkSans-Medium.ttf */,
+				D89DE9F8FD954CF5A5FE93D0 /* WorkSans-Regular.ttf */,
+				F9D2F0D9E75A4BE0A6D94D24 /* WorkSans-SemiBold.ttf */,
+				95D2EC8A5D6940E2AFE9B949 /* WorkSans-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -932,6 +980,16 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				BB4F38D14449474E95E9B966 /* HiMelody-Regular.ttf in Resources */,
+				22D965FAB2E9456BA7E3E5D7 /* WorkSans-Black.ttf in Resources */,
+				AD03C4AB49804BC59150B8EB /* WorkSans-Bold.ttf in Resources */,
+				50414EB539464F80BD48C6C4 /* WorkSans-ExtraBold.ttf in Resources */,
+				182BC7CD989847478587A292 /* WorkSans-ExtraLight.ttf in Resources */,
+				8097B7A3E3FC4627B4ADB79F /* WorkSans-Light.ttf in Resources */,
+				2919A99C130B4B999BCA7B27 /* WorkSans-Medium.ttf in Resources */,
+				CCA796BE6FF046EA8F57C28A /* WorkSans-Regular.ttf in Resources */,
+				1936AD4DBDAE414FA9BEC6BB /* WorkSans-SemiBold.ttf in Resources */,
+				00F9771E12BA41C88C2B5E66 /* WorkSans-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,9 +1124,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
@@ -1091,9 +1153,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
@@ -1117,6 +1183,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
 			name = Debug;
@@ -1137,6 +1206,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
@@ -1168,9 +1240,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
@@ -1202,9 +1278,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
+					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 			};
@@ -1231,6 +1311,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1255,6 +1336,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};

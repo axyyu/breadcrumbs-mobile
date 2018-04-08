@@ -5,7 +5,7 @@ import { StackNavigator } from 'react-navigation';
 export default class Item extends React.Component {
     constructor(props){
         super(props);
-        console.log(props);
+
     }
   render() {
     return (
@@ -25,8 +25,9 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      flexDirection: 'row',
   },
   name:{
-
+      fontSize: 20
   }
 });
