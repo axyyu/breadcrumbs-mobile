@@ -3,7 +3,6 @@ import { StackNavigator } from 'react-navigation';
 
 import Landing from './components/view/landing';
 import ItemMap from './components/view/map';
-import Config from './components/view/config';
 import ItemList from './components/view/itemlist';
 
 import { PermissionsAndroid } from 'react-native';
@@ -17,9 +16,9 @@ async function requestCameraPermission() {
       }
     )
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-      console.log("You can use the camera")
+      console.log("You can use the fine location.")
     } else {
-      console.log("Camera permission denied")
+      console.log("You can't use the fine location")
     }
   } catch (err) {
     console.warn(err)
