@@ -6,13 +6,31 @@ import TimeTracker from "../timetracker";
 
 import io from 'socket.io-client';
 
+var pickupLines = [
+"Are you a time traveler? Cause I see you in my future!",
+"Are you sure you’re not a parking ticket? Because you’ve got fine written all over you",
+"Please call an ambulance, your beauty is killing me!",
+"If you were a sea i would swim in you forever.",
+"Roses are red, violets are blue, it would be a shame if I couldn’t date you!",
+"Do you play soccer? Because you’re a keeper!",
+"“I have a boyfriend” – Well you look like the kind of girl who could use two",
+"I’m going to have to ask you to leave. You’re making the other girls look bad.",
+"Are you a 45 degree angle? Because you’re acute-y!",
+"Do you drink Pepsi? Because you’re so-da-licious!",
+"8 Planets, 1 Universe, 1.735 billion people, and i end up with you",
+"Roses are red violets are blue, I can’t rhyme but can I date you?",
+"My love for you is like dividing by zero. It’s undefinable.",
+"Are you mexican? Because you’re my juan and only!",
+"Do you like star wars? Because yoda only one for me!",
+"Are your eyes ike? Because i’m lost in them!"
+]
 
 export default class ItemList extends React.Component {
     static navigationOptions = {header:null};
 
     constructor(props){
         super(props);
-
+        this.pickupLine = Math.floor(Math.random() * pickupLines.length);
         this.currentHeld = null;
         this.itemKey = {0:"Idle", 1:"Item"};
         this.state = {
@@ -30,11 +48,15 @@ export default class ItemList extends React.Component {
                     break;
                 }
                 let c = output.events[a];
-                var d = true;
-                for(var b = items.length-1; b>=0; b--){
-                    if(c.time == items[b].time){
-                        d=false;
-                        break;
+
+                var d = false;
+                if(c.hold==="False"){
+                    d=true;
+                    for(var b = items.length-1; b>=0; b--){
+                        if(c.time == items[b].time){
+                            d=false;
+                            break;
+                        }
                     }
                 }
                 if(d){
@@ -80,19 +102,29 @@ export default class ItemList extends React.Component {
         });
     }
   render() {
-      console.log(this.state.itemLog)
+    var list;
+
+    if(this.state.itemLog.length > 0){
+        list = <FlatList
+          data={this.state.itemLog}
+          style={styles.itemlist}
+          keyExtractor={ (item, index) => item.time }
+          renderItem={({item}) => <TimeTracker {...item} navigation={this.props.navigation} /> }
+          />
+    }
+    else{
+        list = <View>
+        <Text style={styles.nothing}>{pickupLines[this.pickupLine] }</Text>
+        <Text style={styles.afterthought}>{"You don't have any items recorded. Pick up some objects!"}</Text>
+        </View>;
+    }
     return (
       <View style={styles.container}>
           <Image
               style={[styles.logo,this.state.border]}
               source = {this.state.image}
           />
-          <FlatList
-            data={this.state.itemLog}
-            style={styles.itemlist}
-            keyExtractor={ (item, index) => item.time }
-            renderItem={({item}) => <TimeTracker {...item} navigation={this.props.navigation} /> }
-            />
+          {list}
       </View>
     );
   }
@@ -122,5 +154,21 @@ const styles = StyleSheet.create({
       marginTop:50,
       width: "100%",
       paddingHorizontal: "5%"
+  },
+  nothing:{
+      textAlign: "center",
+      fontSize: 30,
+      color: "#333533",
+      marginTop:50,
+      fontFamily: "HiMelody-Regular",
+      marginHorizontal: "10%"
+  },
+  afterthought:{
+      textAlign: "center",
+      fontSize: 15,
+      color: "#333533",
+      marginTop:150,
+      fontFamily: "WorkSans-Light",
+      marginHorizontal: "10%"
   }
 });

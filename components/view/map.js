@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, BackHandler } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MapView from 'react-native-maps';
-import { Marker } from 'react-native-maps';
+import { Marker, Polyline } from 'react-native-maps';
 
 export default class ItemMap extends React.Component {
     static navigationOptions = {header:null};
@@ -12,8 +12,8 @@ export default class ItemMap extends React.Component {
         this.props = this.props.navigation.state.params;
         this.state={
           "region": {
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: this.props.lat,
+            longitude: this.props.lng,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           },
@@ -27,20 +27,31 @@ export default class ItemMap extends React.Component {
                       longitude:this.props.lng
                   }
               }
+          ],
+          "points":[
+              {latitude: this.props.lat,
+              longitude: this.props.lng,}
           ]
         };
     }
     componentDidMount(){
-        // this.back();
         navigator.geolocation.getCurrentPosition((pos)=>{
             let coord = pos.coords;
 
-            this.onRegionChange({
-                latitude: coord.latitude,
-                longitude: coord.longitude,
-                latitudeDelta: 0.001,
-                longitudeDelta: 0.001,
-            });
+            // this.onRegionChange({
+            //     latitude: coord.latitude,
+            //     longitude: coord.longitude,
+            //     latitudeDelta: 0.001,
+            //     longitudeDelta: 0.001,
+            // });
+            var points = this.state.points;
+            points.push(
+                {
+                    latitude:coord.latitude,
+                    longitude:coord.longitude
+                }
+            )
+            this.setState({points});
         }, (pos_err)=>console.log(pos_err));
     }
     onRegionChange(region) {
@@ -52,13 +63,12 @@ export default class ItemMap extends React.Component {
       <View style={styles.container}>
       <MapView style={styles.map}
         showsUserLocation={true}
-        showsMyLocationButton={false}
         zoomEnabled = {true}
         mapType="hybrid"
         customMapStyle={mapStyle}
         showsBuildings = {true}
         onRegionChange={this.onRegionChange.bind(this)}
-        onRef={ref => (ref.animateToViewingAngle(70, 10000))}
+        // onRef={ref => (ref.animateToViewingAngle(70, 10000))}
         initialRegion={this.state.region}>
         {this.state.markers.map(marker => (
             <Marker
@@ -351,3 +361,8 @@ const mapStyle = [
     ]
   }
 ]
+// <Polyline
+//     coordinates={this.state.points}
+//   strokeColor="#F6BD60" // fallback for when `strokeColors` is not supported by the map-provider
+//   strokeWidth={6}
+// />
